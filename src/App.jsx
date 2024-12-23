@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Scene from './components/scene';
+import Scene from './components/scene/scene';
 import Overlay from './components/Overlay';
 import Header from './components/Header';
 
@@ -12,9 +12,10 @@ function App() {
   
     return (
       <>
-        {overlayVisible && <Overlay onFinish={handleOverlayFinish} />}
+        {/*{overlayVisible && <Overlay onFinish={handleOverlayFinish} />}
         {!overlayVisible && <Header />}
-        {!overlayVisible && <Scene />}
+        {!overlayVisible && <Scene />} */}
+        <Scene />
       </>
     );
   }

@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import ElCapitanModel from './elCapModel';
+
+import ElCapModel from './elCapModel';
+import BaseCamp from './BaseCamp'; 
 
 const DynamicFOV = () => {
   const { camera } = useThree();
@@ -30,8 +32,12 @@ const Scene = () => (
   >
     <ambientLight intensity={0.5} />
     <directionalLight position={[10, 10, 5]} />
-    <ElCapitanModel />
+    <ElCapModel />
     <DynamicFOV />
+
+
+    <BaseCamp />
+
     <OrbitControls />
   </Canvas>
 );
