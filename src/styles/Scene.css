@@ -1,0 +1,18 @@
+/* Scene.css */
+.scene-container {
+    display: flex;
+    height: 100vh;
+    background: black;
+  }
+  
+  /* 3D Canvas */
+  .canvas-container {
+    flex: 1;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .canvas-container.shifted {
+    transform: translateX(40%); /* Shift right when panel opens */
+    border: 10px solid black; /* Add edge around the 3D canvas */
+  }
+  

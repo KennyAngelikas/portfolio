@@ -1,45 +1,41 @@
-import React, { useEffect } from 'react';
-import { Canvas, useFrame, useThree } from '@react-three/fiber';
+import React, { useState } from 'react';
+import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
+import BaseCampIcon from './BaseCampIcon';
+import SidePanel from './BaseCampSidePanel';
+import ElCapModel from './ElCapModel';
+import LoadZoomIn from './LoadZoomIn';
+import DynamicFOV from './DynamicFOV';
+import '../../styles/Scene.css';
 
-import ElCapModel from './elCapModel';
-import BaseCamp from './BaseCamp'; 
+const Scene = () => {
+  const [isPanelOpen, setIsPanelOpen] = useState(false);
 
-const DynamicFOV = () => {
-  const { camera } = useThree();
+  const handleOpenPanel = () => setIsPanelOpen(true);
+  const handleClosePanel = () => setIsPanelOpen(false);
 
-  useEffect(() => {
-    // Set initial FOV (optional)
-    camera.fov = 25; // Starting FOV
-    camera.updateProjectionMatrix();
-  }, [camera]);
+  return (
+    <div className="scene-container">
+      {/* Side Panel */}
+      <SidePanel isPanelOpen={isPanelOpen} onClose={handleClosePanel} />
 
-  useFrame(() => {
-    // Adjust FOV dynamically
-    if (camera.fov > 6) {
-      camera.fov -= 0.28; // Gradually reduce FOV (zoom in)
-      camera.updateProjectionMatrix();
-    }
-  });
-
-  return null;
+      {/* 3D Canvas */}
+      <div className={`canvas-container ${isPanelOpen ? 'shifted' : ''}`}>
+        <Canvas
+          style={{ height: '100vh', width: '100vw' }}
+          camera={{ position: [12, 2, 10], fov: 50 }} // Start with a wider FOV
+        >
+          <ambientLight intensity={0.5} />
+          <directionalLight position={[10, 10, 5]} />
+          <ElCapModel />
+          <BaseCampIcon onOpenPanel={handleOpenPanel} />
+          <LoadZoomIn /> {/* Initial load zoom-in */}
+          <DynamicFOV isPanelOpen={isPanelOpen} /> {/* Panel-based FOV adjustments */}
+          <OrbitControls />
+        </Canvas>
+      </div>
+    </div>
+  );
 };
-
-const Scene = () => (
-  <Canvas
-    style={{ height: '100vh', width: '100vw' }}
-    camera={{ position: [12, 2, 10], fov: 6 }} // Starting position and FOV
-  >
-    <ambientLight intensity={0.5} />
-    <directionalLight position={[10, 10, 5]} />
-    <ElCapModel />
-    <DynamicFOV />
-
-
-    <BaseCamp />
-
-    <OrbitControls />
-  </Canvas>
-);
 
 export default Scene;

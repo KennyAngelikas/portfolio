@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Scene from './components/scene/scene';
+import Scene from './components/scene/Scene';
 import Overlay from './components/Overlay';
 import Header from './components/Header';
 
