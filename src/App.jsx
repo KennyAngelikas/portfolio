@@ -14,7 +14,7 @@ function App() {
       <>
         {/*{overlayVisible && <Overlay onFinish={handleOverlayFinish} />}
         {!overlayVisible && <Header />}
-        {!overlayVisible && <Scene />} */}
+        {!overlayVisible && <Scene />}*/}
         <Scene />
       </>
     );
