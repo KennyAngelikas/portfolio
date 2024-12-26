@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { useTexture } from '@react-three/drei';
 import {useFrame} from '@react-three/fiber'
 import * as THREE from 'three'; // Import THREE for DoubleSide
-import '../../styles/BaseCampIcon.css'; // Import the CSS file
+import './BaseCampIcon.css'; // Import the CSS file
 
 
 const BaseCampIcon = ({ onOpenPanel }) => {

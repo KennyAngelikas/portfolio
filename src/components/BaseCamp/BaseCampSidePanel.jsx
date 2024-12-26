@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/BaseCampSidePanel.css'; // Add a dedicated CSS file for styling
+import './BaseCampSidePanel.css'; // Add a dedicated CSS file for styling
 
 const BaseCampSidePanel = ({ isPanelOpen, onClose }) => {
   return (

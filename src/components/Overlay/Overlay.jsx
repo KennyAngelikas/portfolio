@@ -1,6 +1,6 @@
 // Overlay.js
 import { TypeAnimation } from 'react-type-animation';
-import '../styles/Overlay.css';
+import './Overlay.css';
 import React, { useEffect, useState, useRef } from 'react';
 
 function Overlay({ onFinish }) {

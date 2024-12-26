@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import BaseCampIcon from './BaseCampIcon';
-import SidePanel from './BaseCampSidePanel';
+import BaseCampIcon from '../BaseCamp/BaseCampIcon';
+import SidePanel from '../BaseCamp/BaseCampSidePanel';
 import ElCapModel from './ElCapModel';
 import LoadZoomIn from './LoadZoomIn';
 import DynamicFOV from './DynamicFOV';
-import '../../styles/Scene.css';
+import './Scene.css';
 
 const Scene = () => {
   const [isPanelOpen, setIsPanelOpen] = useState(false);
