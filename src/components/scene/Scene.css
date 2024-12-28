@@ -2,17 +2,17 @@
 .scene-container {
     display: flex;
     height: 100vh;
-    background: black;
+    background: whitesmoke;
+    overflow: hidden;
   }
   
   /* 3D Canvas */
   .canvas-container {
     flex: 1;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.5s ease-in-out;
   }
   
   .canvas-container.shifted {
-    transform: translateX(40%); /* Shift right when panel opens */
-    border: 10px solid black; /* Add edge around the 3D canvas */
+    transform: translateX(30%); /* Shift right when panel opens */
   }
   

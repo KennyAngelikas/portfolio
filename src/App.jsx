@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Scene from './components/scene/Scene';
-import Overlay from './components/Overlay/Overlay';
-import Header from './components/Header/Header';
+import Overlay from './components/overlay/Overlay';
+import Header from './components/header/Header';
 
 function App() {
     const [overlayVisible, setOverlayVisible] = useState(true);

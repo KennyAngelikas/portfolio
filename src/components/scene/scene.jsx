@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import BaseCampIcon from '../BaseCamp/BaseCampIcon';
-import SidePanel from '../BaseCamp/BaseCampSidePanel';
+import BaseCampIcon from './icon/BaseCampIcon';
+import SidePanel from '../baseCamp/BaseCampSidePanel';
 import ElCapModel from './ElCapModel';
 import LoadZoomIn from './LoadZoomIn';
 import DynamicFOV from './DynamicFOV';

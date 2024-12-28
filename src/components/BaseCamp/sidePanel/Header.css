@@ -1,0 +1,37 @@
+.header {
+  background-color: #333; /* Dark gray background */
+  margin: 0 auto; /* Center the header within its parent */
+  width: 100%; /* Ensures it takes the full width of its parent container */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px; /* Add some padding around the content */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.466); /* Thin white divider underneath */
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+  border-radius: 10px 10px 0 0; /* Optional: Rounded corners at the top */
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  padding-left: 10px;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  padding-right: 10%;
+  gap: 30%; /* Space between links */
+}
+
+.nav-link {
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #5599d8; /* Hover color for links */
+}
