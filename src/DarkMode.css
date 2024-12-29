@@ -1,0 +1,16 @@
+.nameDarkMode-container {
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Top-right position */
+    color: #333; /* Default dark text */
+    font-size: 1.5rem; /* Font size for initials */
+    font-weight: bold; /* Bold text for emphasis */
+    cursor: pointer; /* Pointer cursor to indicate clickability */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+    z-index: 1000;
+  }
+  
+  .nameDarkMode-container:hover {
+    color: #4caf50; /* Change text color on hover */
+  }
+  

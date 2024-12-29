@@ -8,7 +8,8 @@ import LoadZoomIn from './LoadZoomIn';
 import DynamicFOV from './DynamicFOV';
 import './Scene.css';
 
-const Scene = () => {
+const Scene = (onToggle) => {
+
   const [isPanelOpen, setIsPanelOpen] = useState(false);
 
   const handleOpenPanel = () => setIsPanelOpen(true);
@@ -16,6 +17,7 @@ const Scene = () => {
 
   return (
     <div className="scene-container">
+
       {/* Side Panel */}
       <SidePanel isPanelOpen={isPanelOpen} onClose={handleClosePanel} />
 
